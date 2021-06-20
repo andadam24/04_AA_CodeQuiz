@@ -30,5 +30,5 @@ THEN I can save my initials and my score
 ![image](https://user-images.githubusercontent.com/81110930/122690725-256e9c80-d1f9-11eb-8e2d-ca043db90de3.png)
 
 ## Links:
-https://andadam24.github.io/04_AA_CodeQuiz/
-https://github.com/andadam24/04_AA_CodeQuiz
+https://andadam24.github.io/04_AA_CodeQuiz/ <br/>
+https://github.com/andadam24/04_AA_CodeQuiz <br/>
