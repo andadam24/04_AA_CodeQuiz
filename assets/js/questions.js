@@ -1,30 +1,34 @@
-// list of all questions, choices, and answers
+
 var questions = [
   {
-    title: "Commonly used data types DO NOT include:",
-    choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: "alerts"
+    title: "Inside which HTML elemtns do we put JavaScript:",
+    choices: ["<javascript>", "<script>", "<scripting>", "<js>"],
+    answer: "<script>"
   },
   {
-    title: "The condition in an if / else statement is enclosed within ____.",
-    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-    answer: "parentheses"
+    title: "The external JavaScript file must contain the <script> tag",
+    choices: ["True", "False"],
+    answer: "False"
   },
   {
-    title: "Arrays in JavaScript can be used to store ____.",
+    title: "How do you create a function in JavaScript?",
     choices: [
-      "numbers and strings",
-      "other arrays",
-      "booleans",
-      "all of the above"
+      "function = myFunction()",
+      "function myFunction()",
+      "function:myFunction()",
+    
     ],
-    answer: "all of the above"
+    answer: "function myFunction()"
   },
   {
-    title:
-      "String values must be enclosed within ____ when being assigned to variables.",
-    choices: ["commas", "curly brackets", "quotes", "parentheses"],
-    answer: "quotes"
+    title: "How do you call a function named myFunction?",
+    choices: [
+      "call myFunction ()",
+      "myFunction()",
+      "call function myFunction()",
+    
+    ],
+    answer: "myFunction()"
   },
   {
     title:
