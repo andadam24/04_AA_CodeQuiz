@@ -1,19 +1,23 @@
-const question = document.querySelector("question");
-var timer = document.getElementById("time");
-const choices = document.getElementById("choices");
-var submit = document.getElementById("submit");
-var startButton = document.getElementById("start-btn");
-var initials = document.getElementById("initials");
-var feedback = document.getElementById("feedback");
+let currentQuestionIndex = 0
+let time = question.length * 10;
+let timerId;
 
-var sfxRight = new Audio("assets/sfx/correct.wav");
-var sfxWrong = new Audio("assets/sfx/incorrect.wav");
+let questionsEl = document.querySelector("questions");
+let timer = document.getElementById("time");
+let choices = document.getElementById("choices");
+let submit = document.getElementById("submit");
+let startButton = document.getElementById("start-btn");
+let initials = document.getElementById("initials");
+let feedback = document.getElementById("feedback");
+
+let sfxRight = new Audio("assets/sfx/correct.wav");
+let sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 function startQuiz() {
-  var startScreen = document.getElementById("start-screen");
+  let startScreen = document.getElementById("start-screen");
   startScreen.setAttribute("class", "hide");
 
-  questions.removeAttribute("class");
+  questionsEl.removeAttribute("class");
 
   timerId = setInterval(clockTick, 1000);
 
@@ -23,16 +27,16 @@ function startQuiz() {
 }
 
 function getQuestion() {
-  var currentQuestion = questions[currentQuestionIndex];
+  let currentQuestion = questions[currentQuestionIndex];
 
-  var title = document.getElementById("question-title");
+  let title = document.getElementById("question-title");
   title.textContent = currentQuestion.title;
 
   choices.innerHTML = "";
 
   currentQuestion.choices.forEach(function(choice, i) {
 
-    var choiceNode = document.createElement("button");
+    let choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
     choiceNode.setAttribute("value", choice);
 
@@ -81,10 +85,10 @@ function questionClick() {
 function quizEnd() {
   clearInterval(timerId);
 
-  var endScreen = document.getElementById("end-screen");
+  let endScreen = document.getElementById("end-screen");
   endScreen.removeAttribute("class");
 
-  var finalScore = document.getElementById("final-score");
+  let finalScore = document.getElementById("final-score");
   finalScore.textContent = time;
 
 
@@ -101,13 +105,13 @@ function clockTick() {
 }
 
 function saveHighscore() {
-  var initials = initials.value.trim();
+  let initials = initials.value.trim();
 
   if (initials !== "") {
-    var highscores =
+    let highscores =
       JSON.parse(window.localStorage.getItem("highscores")) || [];
 
-    var newScore = {
+    let newScore = {
       score: time,
       initials: initials
     };
