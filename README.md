@@ -1,7 +1,7 @@
 # 04_AA_CodeQuiz
 
 ## Description:
-This application was used to create a multiple choice about JavaScript fundamentals quiz using HTML, CSS, and JS. This quiz is timed (75 seconds) and if the user gets an answer incorrect, their score drops by 15 seconds/pts. The user has the opportunity to submit their final score to the HighScore page. All submitted HighScores will be listed on this site. 
+This application was used to create a multiple choice about JavaScript fundamentals quiz using HTML, CSS, and JS. This quiz is timed and if the user gets an answer incorrect, their score drops by 10 seconds/pts. The user has the opportunity to submit their final score to the HighScore page. All submitted HighScores will be listed on this site. 
 
 ## User Story:
 
@@ -24,10 +24,7 @@ WHEN the game is over
 THEN I can save my initials and my score
 
 ## Images:
-![image](https://user-images.githubusercontent.com/81110930/122690658-e3455b00-d1f8-11eb-8a30-b23bbd1bbd2d.png)
-![image](https://user-images.githubusercontent.com/81110930/122690678-fd7f3900-d1f8-11eb-9850-fcab23e40faf.png)
-![image](https://user-images.githubusercontent.com/81110930/122690703-125bcc80-d1f9-11eb-8d27-6c88f3f5ef63.png)
-![image](https://user-images.githubusercontent.com/81110930/122690725-256e9c80-d1f9-11eb-8e2d-ca043db90de3.png)
+
 
 ## Links:
 https://andadam24.github.io/04_AA_CodeQuiz/ <br/>
