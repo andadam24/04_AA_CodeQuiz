@@ -1,12 +1,51 @@
+let questions = [
+  {
+    title: "Inside which HTML elemtns do we put JavaScript:",
+    choices: ["<javascript>", "<script>", "<scripting>", "<js>"],
+    answer: "<script>"
+  },
+  {
+    title: "The external JavaScript file must contain the <script> tag",
+    choices: ["True", "False"],
+    answer: "False"
+  },
+  {
+    title: "How do you create a function in JavaScript?",
+    choices: [
+      "function = myFunction()",
+      "function myFunction()",
+      "function:myFunction()",
+    
+    ],
+    answer: "function myFunction()"
+  },
+  {
+    title: "How do you call a function named myFunction?",
+    choices: [
+      "call myFunction ()",
+      "myFunction()",
+      "call function myFunction()",
+    
+    ],
+    answer: "myFunction()"
+  },
+  {
+    title:
+      "A very useful tool used during development and debugging for printing content to the debugger is:",
+    choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
+    answer: "console.log"
+  }
+];
+
 let currentQuestionIndex = 0
-let time = question.length * 10;
+let time = questions.length * 10;
 let timerId;
 
-let questionsEl = document.querySelector("questions");
+let questionsEl = document.querySelector("#questions");
 let timer = document.getElementById("time");
 let choices = document.getElementById("choices");
 let submit = document.getElementById("submit");
-let startButton = document.getElementById("start-btn");
+let startButton = document.getElementById("start");
 let initials = document.getElementById("initials");
 let feedback = document.getElementById("feedback");
 
@@ -61,7 +100,7 @@ function questionClick() {
 
     sfxWrong.play();
 
-    feedbackEl.textContent = "Wrong!";
+    feedback.textContent = "Wrong!";
   } else {
     sfxRight.play();
 
@@ -105,7 +144,7 @@ function clockTick() {
 }
 
 function saveHighscore() {
-  let initials = initials.value.trim();
+  initials = initials.value.trim();
 
   if (initials !== "") {
     let highscores =
